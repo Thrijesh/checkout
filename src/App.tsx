@@ -8,8 +8,6 @@ export default function App() {
 	const [loggedIn, setLoggedIn] = useState(false);
 	const [collectionMethod, setCollectionMethod] = useState('none');
 	const [step, setStep] = useState(0);
- 
-	console.log(collectionMethod)
 
 	
 	useEffect(() => {
@@ -33,7 +31,6 @@ export default function App() {
 	useEffect(() => {
 		const data = localStorage.getItem("data")
 		if (data) {
-			console.log(JSON.parse(data))
 			const parsedData = JSON.parse(data)
 			if(parsedData.loggedIn !== false) {
 				setLoggedIn(parsedData.loggedIn)
