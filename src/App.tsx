@@ -41,7 +41,7 @@ export default function App() {
 			if(parsedData.step !== 0) {
 				setStep(parsedData.step)
 			}	
-		}
+		}   
 	}, [])
 
 	return (

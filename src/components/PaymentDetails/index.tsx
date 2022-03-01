@@ -14,6 +14,11 @@ export default function PaymentDetails({
 	const [paymentMethod, setPaymentMethod] = useState('');
 	const [addressType, setAddressType] = useState('');
 	const className = 'row checkout__header checkout__location-header';
+	
+	const placeOrder = (e: any) => {
+		e.preventDefault()
+		localStorage.clear()
+	}
 
 	return (
 		<div className='col-sm-8 mt-2 pr-md-1 '>
@@ -261,7 +266,7 @@ export default function PaymentDetails({
 							</button>
 							<button
 								className='btn btn-primary text-white  mt-3'
-								onClick={(e) => e.preventDefault()}
+								onClick={(e) => placeOrder(e)}
 							>
 								Place Order
 							</button>

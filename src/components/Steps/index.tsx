@@ -10,7 +10,7 @@ export default function Steps({ user }: { user: IUser }) {
 
 	const getClass = (elementIndex: number): string => {
 		const baseStyle = `btn btn-circle`;
-		const isActive = ` is-active`;
+		const isActive = `is-active`;
 		const isComplete = ' completed';
 
 		if (elementIndex === user.step) {
